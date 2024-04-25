@@ -1,0 +1,17 @@
+{
+    "name": "task",
+    "version": "1.0.0",
+    "description": "task manager api",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "Nivrita",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.10",
+        "express": "^4.19.2"
+    }
+}
