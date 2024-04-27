@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 body {
@@ -19,11 +18,11 @@ body {
 }
 
 .container h1,
-form {
+.container form {
   padding: 30px 0;
 }
 
-.container form input {
+.container form input[type="text"] {
   margin: 10px 0;
   padding: 15px 20px;
   width: 100%;
@@ -34,40 +33,26 @@ form {
   font-size: 20px;
 }
 
-.container form input:focus {
+.container form input[type="text"]:focus {
   border: 1px solid #7e95e7;
 }
 
-button,
-a.btn {
+.container form button,
+.container a.btn {
   padding: 15px 50px;
   margin: 10px;
   width: auto;
   background: #082871;
   border: none;
-  color: rgb(255, 255, 255);
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   border-radius: 20px;
-  transition: 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
   font-size: 20px;
 }
 
-a.btn,
-button:hover {
-  color: #082871;
-  border: 1px solid #082871;
-  background: transparent;
-}
-
-a.btn {
-  margin: 0px;
-  display: block;
-  padding: 15px 30px;
-  text-align: center;
-}
-
-a.btn:hover {
-  background: #082871;
-  color: #fff;
+.container form button:hover,
+.container a.btn:hover {
+  background: #7e95e7;
 }

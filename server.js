@@ -5,6 +5,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
+
 let tasks = []
 
 const generateTaskId = () => {
@@ -53,16 +54,12 @@ app.get('/task/edit/:id', (req, res) => {
 app.post('/task/edit/:id', (req, res) => {
     const taskId = parseInt(req.params.id);
     const updatedTaskName = req.body.task;
-
-    // Find the task with the specified ID in the tasks array
     const taskToUpdate = tasks.find(task => task.id === taskId);
 
-    // Update the task name
     if (taskToUpdate) {
         taskToUpdate.name = updatedTaskName;
         res.redirect('/tasks');
     } else {
-        // Handle error: Task with the specified ID not found
         res.status(404).send('Task not found');
     }
 });

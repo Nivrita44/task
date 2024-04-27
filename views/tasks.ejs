@@ -18,12 +18,6 @@
       <% tasks.forEach(task => { %>
       <li>
         <%= task.name %>
-        <!-- <a class="edit-icon" href="/task/edit"
-          ><i class="fas fa-pencil-alt"></i
-        ></a>
-        <a class="delete-icon" href="/task/delete"
-          ><i class="fas fa-trash-alt"></i
-        ></a> -->
         <a class="edit-icon" href="/task/edit/<%= task.id %>"
           ><i class="fas fa-pencil-alt"></i
         ></a>
