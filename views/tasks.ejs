@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasks list</title>
     <link rel="stylesheet" href="css/style2.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container"></div>
     <h1>Tasks:</h1>
-    <ul>
-        <% tasks.forEach(task => { %>
-
-            <li>
-                <%= task %>
-            </li>
-
-            <%}); %>
+    <ul class="task-list">
+      <% tasks.forEach(task => { %>
+      <li>
+        <%= task.name %>
+        <!-- <a class="edit-icon" href="/task/edit"
+          ><i class="fas fa-pencil-alt"></i
+        ></a>
+        <a class="delete-icon" href="/task/delete"
+          ><i class="fas fa-trash-alt"></i
+        ></a> -->
+        <a class="edit-icon" href="/task/edit/<%= task.id %>"
+          ><i class="fas fa-pencil-alt"></i
+        ></a>
+        <a class="delete-icon" href="/task/delete/<%= task.id %>"
+          ><i class="fas fa-trash-alt"></i
+        ></a>
+      </li>
+      <% }); %>
     </ul>
     <a class="btn" href="/">Go Back</a>
-</body>
-
+  </body>
 </html>

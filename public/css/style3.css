@@ -71,24 +71,3 @@ a.btn:hover {
   background: #082871;
   color: #fff;
 }
-
-ul {
-  list-style: none;
-}
-
-li {
-  padding: 4px 0;
-  font-size: 18px;
-  margin: 5px 0;
-  color: #000;
-}
-
-li:nth-child(even) {
-  color: #fff;
-  background: #000;
-}
-
-li:nth-child(odd) {
-  color: aquamarine;
-  background: #474444;
-}
